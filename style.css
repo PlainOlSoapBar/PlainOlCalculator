@@ -90,7 +90,7 @@ body {
 .calc-button-equal {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(160, 255, 128, 0.75);
+    background: rgb(183, 253, 159);
     border: 1px solid rgba(35, 35, 35, 0.3);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.5);
@@ -104,7 +104,7 @@ body {
 .calc-button:last-child {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(160, 255, 128, 0.75);
+    background: rgb(183, 253, 159);
     border: 1px solid rgba(35, 35, 35, 0.3);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.5);
