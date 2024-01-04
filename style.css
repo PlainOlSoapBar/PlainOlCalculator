@@ -20,3 +20,20 @@ body {
     height: inherit;
     justify-content: center;
 }
+
+.wrapper {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(35, 35, 35, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.5);
+    color: #232323;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(35, 35, 35, 0.3);
+    flex-basis: 400px;
+    height: 540px;
+    padding: 35px 35px;
+}
