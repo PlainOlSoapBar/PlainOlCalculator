@@ -52,3 +52,9 @@ body {
     text-align: right;
     width: 326px;
 }
+
+.calc-button-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
