@@ -10,3 +10,13 @@ html {
     margin: 0;
     padding: 0;
 }
+
+body {
+    align-items: center;
+    background: #C3C586;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-display: swap;
+    height: inherit;
+    justify-content: center;
+}
