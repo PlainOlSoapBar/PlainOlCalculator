@@ -114,3 +114,19 @@ body {
     font-size: 24px;
     font-family: inherit;
 }
+
+.calc-button:hover {
+    background-color: inherit;
+}
+
+.calc-button-clear:hover {
+    background-color: inherit;
+}
+
+.calc-button:last-child:hover {
+    background-color: rgb(157, 216, 137);
+}
+
+.calc-button-equal:last-child:hover {
+    background-color: rgb(157, 216, 137);
+}
