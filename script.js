@@ -12,3 +12,35 @@ function buttonClick(value) {
     }
     screen.innerText = buffer;
 }
+
+function handleSymbol(value) {
+    switch(symbol) {
+        case 'C':
+            runningTotal = 0;
+            buffer = '0';
+            break;
+        case '=':
+            if (previousOperator == null) {
+                return;
+            }
+            flushOperation(parseInt(buffer));
+            previousOperator == null;
+            buffer = runningTotal;
+            runningTotal = 0;
+            break;
+        case '←':
+            if (buffer.length === 1) {
+                buffer = '0';
+            } else {
+                buffer = buffer.toString(0, buffer.length - 1);
+            }
+            break;
+        case '+':
+        case '-':
+        case '×':
+        case '÷':
+
+    }
+}
+
+/* Symbols: ← , − , × , ÷ , + */
