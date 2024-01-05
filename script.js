@@ -1,30 +1,30 @@
 let runningTotal = 0;
-let buffer = '0';
+let buffer = "0";
 let previousOperator;
 
 const screen = document.querySelector('.screen');
 
 function buttonClick(value) {
-    if (isNan(value)) {
+    if (isNaN(value)) {
         handleSymbol(value);
     } else {
-        handleSymbol(value);
+        handleNumber(value);
     }
     screen.innerText = buffer;
 }
 
-function handleSymbol(value) {
+function handleSymbol(symbol) {
     switch(symbol) {
         case 'C':
-            runningTotal = 0;
             buffer = '0';
+            runningTotal = 0;
             break;
         case '=':
-            if (previousOperator == null) {
+            if(previousOperator === null) {
                 return;
             }
             flushOperation(parseInt(buffer));
-            previousOperator == null;
+            previousOperator = null;
             buffer = runningTotal;
             runningTotal = 0;
             break;
@@ -32,19 +32,20 @@ function handleSymbol(value) {
             if (buffer.length === 1) {
                 buffer = '0';
             } else {
-                buffer = buffer.toString(0, buffer.length - 1);
+                buffer = buffer.substring(0, buffer.length - 1);
             }
             break;
         case '+':
-        case '-':
+        case '−':
         case '×':
         case '÷':
-
+            handleMath(symbol);
+            break;
     }
 }
 
 function handleMath(symbol) {
-    if (buffer === 0) {
+    if(buffer === '0'){
         return;
     }
 
@@ -59,23 +60,20 @@ function handleMath(symbol) {
     buffer = '0';
 }
 
-function flushOperation(intBuffer) {
+function flushOperation(intBuffer){ 
     if (previousOperator === '+') {
         runningTotal += intBuffer;
-    }
-    if (previousOperator === '-') {
+    } else if (previousOperator === '−') {
         runningTotal -= intBuffer;
-    }
-    if (previousOperator === '×') {
+    } else if (previousOperator === '×') {
         runningTotal *= intBuffer;
-    }
-    if (previousOperator === '÷') {
+    } else if (previousOperator === '÷') {
         runningTotal /= intBuffer;
     }
 }
 
 function handleNumber(numberString) {
-    if (buffer === 0) {
+    if (buffer === "0") {
         buffer = numberString;
     } else {
         buffer += numberString;
@@ -90,5 +88,3 @@ function init() {
 }
 
 init();
-
-/* Symbols: ← , − , × , ÷ , + */
